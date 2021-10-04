@@ -1,14 +1,12 @@
-# Udacity Blockchain Capstone
+# Development Notes
 
-The capstone will build upon the knowledge you have gained in the course in order to build a decentralized housing product. 
+### Setup OpenZeppelin and HD Wallet
 
-# Project Resources
+Setup when you need them.
 
-* [Remix - Solidity IDE](https://remix.ethereum.org/)
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Truffle Framework](https://truffleframework.com/)
-* [Ganache - One Click Blockchain](https://truffleframework.com/ganache)
-* [Open Zeppelin ](https://openzeppelin.org/)
-* [Interactive zero knowledge 3-colorability demonstration](http://web.mit.edu/~ezyang/Public/graph/svg.html)
-* [Docker](https://docs.docker.com/install/)
-* [ZoKrates](https://github.com/Zokrates/ZoKrates)
+```bash
+# cd to contracts directory and run commands
+$ npm install --save  openzeppelin-solidity@2.3
+$ npm install --save  truffle-hdwallet-provider@1.0.17
+$ npm audit fix
+```
