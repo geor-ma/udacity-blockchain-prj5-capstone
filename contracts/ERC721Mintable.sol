@@ -145,7 +145,8 @@ contract ERC721 is Pausable, ERC165 {
     // Mapping from owner to number of owned token
     // IMPORTANT: this mapping uses Counters lib which is used to protect overflow when incrementing/decrementing a uint
     // use the following functions when interacting with Counters: increment(), decrement(), and current() to get the value
-    // see: https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/drafts/Counters.sol
+    // see (not working - see working link below): https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/drafts/Counters.sol
+    // see current working link: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Counters.sol
     mapping(address => Counters.Counter) private _ownedTokensCount;
 
     // Mapping from owner to operator approvals
@@ -159,24 +160,42 @@ contract ERC721 is Pausable, ERC165 {
     }
 
     function balanceOf(address owner) public view returns (uint256) {
-        // TODO return the token balance of given address
-        // TIP: remember the functions to use for Counters. you can refresh yourself with the link above
+        // return the token balance of given address
+        // TIP: remember the functions to use for Counters. you can refresh yourself with the link below
+        //https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Counters.sol
+
+        return _ownedTokensCount[owner].current();
     }
 
     function ownerOf(uint256 tokenId) public view returns (address) {
-        // TODO return the owner of the given tokenId
+        // return the owner of the given tokenId
+        return _tokenOwner[tokenId];
     }
 
     //    @dev Approves another address to transfer the given token ID
     function approve(address to, uint256 tokenId) public {
-        // TODO require the given address to not be the owner of the tokenId
-        // TODO require the msg sender to be the owner of the contract or isApprovedForAll() to be true
-        // TODO add 'to' address to token approvals
-        // TODO emit Approval Event
+        // require the given address to not be the owner of the tokenId
+        require(
+            to != _tokenOwner[tokenId],
+            "require the given address to not be the owner of the tokenId"
+        );
+        //  require the msg sender to be the owner of the contract or isApprovedForAll() to be true
+        require(
+            msg.sender == _tokenOwner[tokenId],
+            "require the msg sender to be the owner of the contract or isApprovedForAll() to be true"
+        );
+
+        // add 'to' address to token approvals
+        _tokenApprovals[tokenId] = to;
+
+        // emit Approval Event
+        emit Approval(msg.sender, to, tokenId);
     }
 
     function getApproved(uint256 tokenId) public view returns (address) {
-        // TODO return token approval if it exists
+        //  return token approval if it exists
+        require(_exists(tokenId), "token approval does not exist.");
+        return _tokenApprovals[tokenId];
     }
 
     /**
