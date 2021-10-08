@@ -1,6 +1,6 @@
 const MetaCoin = artifacts.require("MetaCoin");
 
-contract("MetaCoin", accounts => {
+contract("MetaCoin", (accounts) => {
   it("should put 10000 MetaCoin in the first account", async () => {
     const instance = await MetaCoin.deployed();
     const balance = await instance.getBalance.call(accounts[0]);
@@ -11,7 +11,7 @@ contract("MetaCoin", accounts => {
     const instance = await MetaCoin.deployed();
     const metaCoinBalance = await instance.getBalance.call(accounts[0]);
     const metaCoinBalanceInEth = await instance.getBalanceInEth.call(
-      accounts[0],
+      accounts[0]
     );
 
     const expected = 2 * metaCoinBalance.toNumber();
@@ -19,7 +19,7 @@ contract("MetaCoin", accounts => {
     assert.equal(
       metaCoinBalanceInEth.toNumber(),
       expected,
-      "Library function returned unexpeced function, linkage may be broken",
+      "Library function returned unexpeced function, linkage may be broken"
     );
   });
 
@@ -44,12 +44,12 @@ contract("MetaCoin", accounts => {
     assert.equal(
       finalBalance1.toNumber(),
       initBalance1.toNumber() - amount,
-      "Amount wasn't correctly taken from the sender",
+      "Amount wasn't correctly taken from the sender"
     );
     assert.equal(
       finalBalance2.toNumber(),
       initBalance2.toNumber() + amount,
-      "Amount wasn't correctly sent to the receiver",
+      "Amount wasn't correctly sent to the receiver"
     );
   });
 });

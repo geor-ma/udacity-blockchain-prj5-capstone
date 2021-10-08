@@ -8,7 +8,7 @@ contract TestMetacoin {
     function testInitialBalanceUsingDeployedContract() public {
         MetaCoin meta = MetaCoin(DeployedAddresses.MetaCoin());
 
-        uint expected = 10000;
+        uint256 expected = 10000;
 
         Assert.equal(
             meta.getBalance(msg.sender),
@@ -20,7 +20,7 @@ contract TestMetacoin {
     function testInitialBalanceWithNewMetaCoin() public {
         MetaCoin meta = new MetaCoin();
 
-        uint expected = 10000;
+        uint256 expected = 10000;
 
         Assert.equal(
             meta.getBalance(address(this)),
