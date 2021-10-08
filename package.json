@@ -1,0 +1,26 @@
+{
+  "name": "udacity-blockchain-prj5-capstone",
+  "version": "1.0.0",
+  "description": "udacity blockchain project 5 - capstone",
+  "main": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geor-ma/udacity-blockchain-prj5-capstone.git"
+  },
+  "author": "mg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geor-ma/udacity-blockchain-prj5-capstone/issues"
+  },
+  "homepage": "https://github.com/geor-ma/udacity-blockchain-prj5-capstone#readme",
+  "dependencies": {
+    "openzeppelin-solidity": "^2.3.0",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
