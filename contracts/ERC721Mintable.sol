@@ -616,7 +616,8 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 
 //  Create CustomERC721Token contract that inherits from the ERC721Metadata contract. You can name this contract as you please
 
-contract CustomERC721Token is ERC721Metadata {
+// Note - call this contract ERC721MintableComplete as template test code calls out ERC721MintableComplete
+contract ERC721MintableComplete is ERC721Metadata {
     //  1) Pass in appropriate values for the inherited ERC721Metadata contract
     //      - make the base token uri: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/
     // https://docs.soliditylang.org/en/develop/contracts.html#arguments-for-base-constructors
