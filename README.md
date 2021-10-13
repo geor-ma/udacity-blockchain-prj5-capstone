@@ -10,6 +10,12 @@ Once the token has been verified you will place it on a blockchain market place 
 
 > To make your development experience better, please use vscode and select open in dev container. More info [here](https://code.visualstudio.com/docs/remote/containers)
 
+### Run Tests
+
+```bash
+$ truffle test
+```
+
 ### Setup OpenZeppelin and HD Wallet
 
 Setup as you need them.
