@@ -437,9 +437,9 @@ Minted tokens are available here - https://rinkeby.etherscan.io/token/0xe9651b66
 
 ### OpenSea market
 
-- go to [this link](https://rinkeby.opensea.io/get-listed/step-two) and enter your SolnSquareVerifier's contract address
+> go to [this link](https://rinkeby.opensea.io/get-listed/step-two) and enter your SolnSquareVerifier's contract address
 
-- storefront url - https://testnets.opensea.io/collection/unidentified-contract-swvbu8brs9
+- store front url - https://testnets.opensea.io/collection/unidentified-contract-swvbu8brs9
 
 - My assets here -
   https://testnets.opensea.io/assets/unidentified-contract-swvbu8brs9
