@@ -4,7 +4,7 @@ Final project for my Blockchain NanoDegree. Details are [here](https://classroom
 
 Project brief copied from project [introduction page](https://classroom.udacity.com/nanodegrees/nd1309/parts/36b45ada-c0e5-495e-b6cc-34ea14a18d61/modules/996c54f8-4fa5-4eee-98c3-25788c8a5fc5/lessons/d35b025b-01b3-4bd9-acf5-e8bb5b88f00c/concepts/4d2728c0-0886-4ba2-aa61-bf1362bc3664) -
 
-In this project you will be minting your own tokens to represent your title to the properties. Before you mint a token, you need to verify you own the property. You will use zk-SNARKs to create a verification system which can prove you have title to the property without revealing that specific information on the property. We covered the basics on zk-SNARKs in Privacy lesson in Course 5
+In this project you will be minting your own tokens to represent your title to the properties. Before you mint a token, you need to verify you own the property. You will use zk-SNARKs to create a verification system which can prove you have title to the property without revealing that specific information on the property.
 
 Once the token has been verified you will place it on a blockchain market place (OpenSea) for others to purchase
 
