@@ -171,6 +171,46 @@ drwxr-xr-x 10 root     root     320 Oct 11 15:37 ..
 
 ```
 
+### Tests
+
+```bash
+
+truffle(develop)> test
+Using network 'develop'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+  Contract: TestERC721Mintable
+    match erc721 spec
+      ✓ should return total supply (74ms)
+      ✓ should get token balance (94ms)
+      ✓ should return token uri (63ms)
+      ✓ should transfer token from one owner to another (602ms)
+    have ownership properties
+      ✓ should fail when minting when address is not contract owner (2405ms)
+      ✓ should return contract owner (1060ms)
+
+  Contract: SolnSquareVerifier
+    Test SolnSquareVerifier
+isTokenMinted 1 : true
+      ✓ Test mint token with solution added (3610ms)
+
+  Contract: Verifier
+    Test square verifier
+      ✓ Test verification with correct proof (3318ms)
+      ✓ Test verification with incorrect proof (3667ms)
+
+
+  9 passing (31s)
+
+
+```
+
 ### References
 
 - https://docs.openzeppelin.com/contracts/3.x/api/utils
