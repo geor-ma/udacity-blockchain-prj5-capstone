@@ -225,6 +225,9 @@ isTokenMinted 1 : true
 - Create account or login to infra.io
 - Go to project settings and get project id. That is your infuraKey
 - Get your recovery phrase from metamask. that is mnemonic. Keep it safe and secure. nobody should see it.
+- add .infurakey file and paste your infurakey.
+- add a .mnemonic file and paste your mnemonic in that file.
+- add .infurakey and .mnemonic to .gitignore.
 - Update your truffle-config.js with rinkeby network info. Refer truffle-config.js for configurations
 - run command
 
@@ -235,7 +238,7 @@ $ truffle migrate --network rinkeby
 
 - Go to https://rinkeby.etherscan.io/, search by the contract addresses
 
-#### Reference - Contract addresses from rinkeby
+### Reference - Contract addresses from rinkeby
 
 ```bash
 truffle(develop)> migrate --network rinkeby
@@ -400,6 +403,9 @@ Summary
 - Saving migration to chain.
 
 ```
+
+https://rinkeby.etherscan.io/tx/0x54090a8198ba1e34ed7efddd0c24b6e9c0a8d351b97b2a9b242decd7aac1d382
+https://rinkeby.etherscan.io/tx/0x3867246b6875f8128ba69d8d2382140f5721fe23e87ea043c33538feae1534ae
 
 ### References
 
