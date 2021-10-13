@@ -415,6 +415,10 @@ Summary
 https://rinkeby.etherscan.io/tx/0x54090a8198ba1e34ed7efddd0c24b6e9c0a8d351b97b2a9b242decd7aac1d382
 https://rinkeby.etherscan.io/tx/0x3867246b6875f8128ba69d8d2382140f5721fe23e87ea043c33538feae1534ae
 
+### Contract ABIs
+
+- Available in folder [build/contracts](./build/contracts)
+
 ### References
 
 - https://docs.openzeppelin.com/contracts/3.x/api/utils
