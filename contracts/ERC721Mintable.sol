@@ -594,10 +594,10 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
         return _baseTokenURI;
     }
 
-    // function tokenURI(uint256 tokenId) external view returns (string memory) {
-    //     require(_exists(tokenId));
-    //     return _tokenURIs[tokenId];
-    // }
+    function tokenURI(uint256 tokenId) external view returns (string memory) {
+        require(_exists(tokenId));
+        return _tokenURIs[tokenId];
+    }
 
     // Create an internal function to set the tokenURI of a specified tokenId
     // It should be the _baseTokenURI + the tokenId in string form
@@ -609,14 +609,18 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
     function setTokenURI(uint256 tokenId) internal {
         require(_exists(tokenId), "require the token exists before setting");
 
-        string memory tokenURI = strConcat(_baseTokenURI, uint2str(tokenId));
-        _tokenURIs[tokenId] = tokenURI;
+        string memory tokenURIString = strConcat(
+            _baseTokenURI,
+            uint2str(tokenId)
+        );
+        _tokenURIs[tokenId] = tokenURIString;
     }
 }
 
 //  Create CustomERC721Token contract that inherits from the ERC721Metadata contract. You can name this contract as you please
 
-contract CustomERC721Token is ERC721Metadata {
+// Note - call this contract ERC721MintableComplete as template test code calls out ERC721MintableComplete
+contract ERC721MintableComplete is ERC721Metadata {
     //  1) Pass in appropriate values for the inherited ERC721Metadata contract
     //      - make the base token uri: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/
     // https://docs.soliditylang.org/en/develop/contracts.html#arguments-for-base-constructors
