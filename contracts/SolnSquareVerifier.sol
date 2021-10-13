@@ -53,13 +53,13 @@ contract SolnSquareVerifier is ERC721MintableComplete {
     //  - make sure the solution is unique (has not been used before)
     //  - make sure you handle metadata as well as tokenSuplly
     function mintNFT(
-        address owner,
         uint256 tokenId,
         uint256[2] memory a,
         uint256[2][2] memory b,
         uint256[2] memory c,
         uint256[2] memory input
-    ) public {
+    ) public returns (bool isTokenMinted) {
+        address owner = msg.sender;
         require(owner != address(0), "invalid owner address");
 
         //check if this solution is used before
@@ -78,5 +78,6 @@ contract SolnSquareVerifier is ERC721MintableComplete {
 
         //add solution
         addSolution(owner, solutionKey);
+        return true;
     }
 }
