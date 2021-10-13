@@ -425,6 +425,27 @@ https://rinkeby.etherscan.io/tx/0x3867246b6875f8128ba69d8d2382140f5721fe23e87ea0
 
 - Available in folder [build/contracts](./build/contracts)
 
+### Mint tokens
+
+[refer this link on minting token](https://knowledge.udacity.com/questions/133570)
+
+> Use your metamask connected account address to mint token in https://www.myetherwallet.com/wallet/interact.
+
+Minted tokens are available here - https://rinkeby.etherscan.io/token/0xe9651b66A9d1bC90653Cca1edD11a1BABEC79570
+
+> the address for minted tokens link above is your SolnSquareVerifier's contract address
+
+### OpenSea market
+
+- go to [this link](https://rinkeby.opensea.io/get-listed/step-two) and enter your SolnSquareVerifier's contract address
+
+- storefront url - https://testnets.opensea.io/collection/unidentified-contract-swvbu8brs9
+
+- My assets here -
+  https://testnets.opensea.io/assets/unidentified-contract-swvbu8brs9
+
+- Activities - https://testnets.opensea.io/collection/unidentified-contract-swvbu8brs9?tab=activity
+
 ### References
 
 - https://docs.openzeppelin.com/contracts/3.x/api/utils
